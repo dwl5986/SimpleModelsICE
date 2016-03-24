@@ -1,0 +1,32 @@
+doctype html
+html(lang="en")
+  head
+  body
+    h1 Welcome to page 2
+    // links or URLs are always GET resources as they are getting (retrieving) a resource
+    a(href="/page1") Cats List  |
+    a(href="/page2")   Cats  |
+    a(href="/page3")   Dogs  |
+    a(href="/page4")  Dogs List
+    h3 Name a Cat
+    form(action="/setName", method="POST")
+      | First name:
+      input(type="text", name="firstname", value="")
+      | Last name:
+      input(type="text", name="lastname", value="")
+      | Number Beds:
+      input(type="number", name="beds" value="")
+      input(type="submit", value="Submit")
+    br
+    br
+    //form to update the last added Cat.
+    form(action="/updateLast", method="POST")
+      | Update Last:
+      input(type="submit", value="Submit")
+    br
+    br
+    //form to find a cat by full name (instead of first name and last name)
+    form(action="/findByName", method="GET")
+      | Name to search for:
+      input(type="text", name="name", value="")
+      input(type="submit", value="Submit")   

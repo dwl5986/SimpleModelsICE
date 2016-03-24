@@ -1,0 +1,14 @@
+doctype html
+html(lang="en")
+  head
+  body
+    h1 Welcome to page 4
+    // links or URLs are always GET resources as they are getting (retrieving) a resource
+    a(href="/page1") Cats List  |
+    a(href="/page2")   Cats  |
+    a(href="/page3")   Dogs  |
+    a(href="/page4")  Dogs List
+    h4 Dogs
+    ul
+      each val in dogs
+        li= val.name + " is " + val.age + " years old."
